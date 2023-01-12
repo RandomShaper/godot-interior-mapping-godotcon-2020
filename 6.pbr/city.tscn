@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://building.tscn" type="PackedScene" id=1]
+[ext_resource path="res://6.pbr/building.material" type="Material" id=2]
+[ext_resource path="res://6.pbr/DirectionalLight.gd" type="Script" id=3]
+
+[node name="city" type="Spatial"]
+
+[node name="building" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.771612, 0, 1.431 )
+size = Vector3( 2, 8, 2 )
+material = ExtResource( 2 )
+
+[node name="building2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.37239, 0, 1.2441 )
+size = Vector3( 2, 6, 2 )
+material = ExtResource( 2 )
+
+[node name="building3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79756, -0.0304871, 1.26837 )
+size = Vector3( 4, 4, 4 )
+material = ExtResource( 2 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.199963, -0.940424, 0.274344, 0.97457, -0.162539, 0.153308, -0.0995837, 0.298066, 0.94914, 3.46001, 5.37975, -2.02822 )
+script = ExtResource( 3 )
